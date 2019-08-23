@@ -1,0 +1,574 @@
+
+/* COLORES */
+
+$amarillo: #f0ea6a; 
+$verde: #70A73A;
+$azul: #4A72B1;
+$rojo: #BF0310;
+$blanco: #fefefe;
+$naranja: #ff5500;
+
+/*FONDO*/
+
+$fondo:url(images/speaker-grille-texture.jpg) repeat;
+
+@mixin font-general {
+    line-height: 22px;
+    font-size: 14px;
+}
+
+@mixin inner-content {
+    margin:0 auto;
+    width:1025px;
+}
+
+@mixin linea-color($color) {
+    width: 94%;
+    border-top: 5px solid $color;
+    float: left;   
+}
+
+@mixin menu-activo($color){ 
+    background-color:$color;
+}
+
+@mixin imagen-color($imagen) {
+    background-image:$imagen;
+    background-repeat: no-repeat;
+    width: 5%;
+    height: 5px;
+    float: left;
+}
+
+@mixin image-title($imagen) {
+    background-image:$imagen;
+    background-repeat: no-repeat;
+    text-transform: uppercase;
+    font-size: 26px;
+    width: 25px;
+    padding:0 0 30px 30px;
+    background-position: 0px 11px;
+    height: 25px;
+}
+
+@mixin ver-mas($color){
+    color: #ffffff;
+    padding: 1px 5px;
+    margin-top: 15px;
+    font-size: 12px;
+    text-decoration: none;
+    display: inline-block;
+    &:hover {
+        background-color: $color;
+        text-shadow: 0px 0px 2px #000000;
+    }
+}
+
+@mixin social-icon($imagen){
+    background-image:$imagen;
+    background-repeat:no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+@mixin input-contacto {
+    width: 500px;
+    background-color: #000000;
+    margin: 10px 0;
+    border:0;
+    font-size:14px;
+    padding-left:5px;
+    border-radius: 7px;
+    box-shadow: 0 0 10px $amarillo;
+    color:#ffffff;
+}
+
+html {
+    background-color: #000000;
+}
+
+body {
+    background:$fondo;
+    color:#fefefe;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*HEADER*/
+
+header.banner {
+    background:url(images/back3.png) repeat;   
+    width: 100%;
+    display: table;
+    padding-bottom: 10px;
+}
+
+header a.brand {
+    background: url(images/logo.png) 0 0 no-repeat;
+    text-decoration: none;
+    color: transparent;
+    font-size: 1px;
+    text-indent: -500px;
+    width: 323px;
+    height: 90px;
+    float: left;
+}
+
+header .container {
+    @include inner-content;
+}
+
+header .nav-primary {
+    float: right;
+    margin-top: 20px;
+    clear: right;
+}
+
+header .nav-secondary  {
+    float: right;
+    margin: 4px 64px 0 0;
+    z-index: 1;
+    position: relative;
+}
+
+header .nav-secondary.oculto {
+    display:none;
+}
+
+header .nav-secondary ul.nav-m {
+    background:url(images/back3.png) repeat;   
+    position: absolute;
+    border-radius: 5px;
+    padding: 5px;
+    width: 90px;
+}
+
+header .nav-secondary ul.nav-m li {
+    float:left;
+    clear:left;
+}
+
+header .nav-secondary ul.nav-m li a {
+    font-size:14px;
+    width:100%;
+}
+
+header .nav-secondary ul.nav-m li ul {
+    position:relative;
+    display:block;
+    border: 0;
+    padding: 0;
+    margin-left: 10px;
+    background-color: transparent;
+}
+
+header .nav-secondary ul.nav-m li ul li {
+    margin:3px 0;
+}
+
+header .nav-secondary ul.nav-m li ul li a {
+    font-size:13px;    
+}
+
+header #burguer {
+    display:none;
+    background:url(images/burguer.png) center no-repeat;
+    float:right;
+    width: 26px;
+    clear: right;
+    height: 26px;
+} 
+
+header nav ul li {
+    list-style-type:none;
+    float:left;
+    margin-right: 20px;
+}
+
+header nav ul.nav > li:last-child {
+    margin:0;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 3px 10px;
+    font-size: 18px;
+    display:inline-block;
+    text-transform: uppercase;
+    text-shadow: 0px 0px 2px #000000;
+}
+
+header nav ul li ul {
+    display: none;
+    position: absolute;
+    border-top: 4px solid #000000;
+    padding: 3px 0;
+    z-index: 1;
+    border-radius: 0 0 5px 5px;
+}
+
+header nav ul li:hover ul {
+    display:block;
+}
+
+header nav ul li:first-child ul {
+    background-color:$rojo; 
+    width: 73px;
+}
+
+header nav ul li:nth-child(2) ul {
+    background-color:$azul; 
+    width: 102px;
+}
+
+header nav ul li ul li {
+    float:left;
+    clear:left;
+    margin: 5px 0;
+}
+
+header nav ul li ul.sub-menu li a {
+    text-transform: capitalize;
+    font-size: 13px;
+    background-color:transparent;
+} 
+
+header nav ul li a:hover { 
+    -webkit-transition: background-color 300ms linear;
+    -moz-transition: background-color 300ms linear;
+    -o-transition: background-color 300ms linear;
+    -ms-transition: background-color 300ms linear;
+    transition: background-color 300ms linear;
+}
+
+header nav ul.nav > li:first-child:hover {
+    background-color:$rojo; 
+}
+
+header nav ul.nav > li:nth-child(2):hover {
+    background-color:$azul; 
+}
+
+header nav ul.nav > li:nth-child(3):hover {
+    background-color:$verde; 
+}
+
+header nav ul.nav > li:nth-child(4):hover {
+    background-color:$amarillo; 
+}
+
+.mltlngg_switcher {
+    float: right;
+    margin: 10px;
+}
+
+.mltlngg_switcher button,
+.mltlngg_switcher button:hover {
+    margin-right:10px;
+}
+
+.mltlngg_switcher button:last-child {
+    margin:0;
+}
+
+form .mltlngg-lang-button-icons img.mltlngg-current-lang {
+    border: 1px solid $amarillo;
+}
+
+.home .current-menu-item{
+    @include menu-activo($rojo);
+}
+
+.category-releases .current-menu-item > a,
+.current-menu-parent.menu-item-24 > a { 
+    @include menu-activo($azul);
+}
+
+.category-artistas .current-menu-item > a,
+.current-menu-parent.menu-item-27 > a { 
+    @include menu-activo($verde);
+}
+
+.contact .current-menu-item > a { 
+    @include menu-activo($amarillo);
+}
+
+/*CONTENT*/
+
+.yellow-line {
+    @include linea-color($amarillo);
+}
+
+.yellow-image {
+    @include imagen-color(url(images/yellow-line.png));
+}
+
+
+.red-image {
+    @include imagen-color(url(images/red-line.png));
+}
+
+.red-line {
+    @include linea-color($rojo);
+}  
+
+.container.wrap .content {
+    @include inner-content;
+    background:url(images/back2.png) repeat;   
+    display: flex;
+    box-shadow: 0px 0px 15px #000000;
+    
+}
+
+.grey {
+    background:url(images/back.png) repeat;   
+}
+
+.main {
+    width:75%;
+    float:left;
+    padding: 0 30px;
+}
+
+.home .page-header,
+.about .page-header,
+.category .page-header,
+.contact .page-header {
+    padding-top: 30px;
+}
+
+
+.home .page-header h1,
+.about .page-header h1 {
+    @include image-title(url(images/red.jpg));
+}
+
+.category-releases .page-header h1 { 
+    @include image-title(url(images/azul.jpg));
+}
+
+.category-artists .page-header h1 { 
+    @include image-title(url(images/green.jpg));
+}
+
+.contact .page-header h1 { 
+    @include image-title(url(images/yellow.jpg));
+}
+
+.category-catalog .page-header h1 { 
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-bottom: 30px;
+ }
+
+ 
+h2.entry-title a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 26px;
+}
+
+.entry-summary p {
+     @include font-general;
+     height:90px;
+     overflow:hidden;
+    
+}
+
+.page p {
+     @include font-general;    
+}
+
+.category-releases .entry-summary p a {
+    display:none;
+}
+
+.category-releases .entry-summary a.ver-mas {
+    @include ver-mas($azul);
+}
+
+.category-artists .entry-summary a.ver-mas {
+    @include ver-mas($verde);
+}
+
+.home article .featured-image,
+.category article .featured-image {
+    float: left;
+    margin-right: 15px;
+    width: 20%;
+}
+
+.category-catalog h1.main-cat,
+.category-comingsoon h1.main-cat {
+    @include image-title(url(images/azul.jpg));
+    padding: 0 0 0px 30px;
+}
+
+.category-releases .category-comingsoon {
+    display:none;
+}
+
+article .featured-image a {
+    display:inline-block;
+}
+
+article .featured-image a img {
+    width:100%;
+    height:auto;
+}
+
+article .der {
+    float: left;
+    width: 75%;
+}
+
+article.post {
+    margin-bottom: 40px;
+    display: inline-block;
+}
+
+article.post time {
+    font-size: 13px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+aside.sidebar {
+    width: 25%;
+    padding: 40px 20px;
+    float: left;
+    
+}
+
+aside.sidebar .soundcloud-user {
+    margin-top: 40px;
+}
+
+/*POST*/
+
+.single-post article h1 {
+    font-size: 35px;
+    margin: 40px 0 10px;
+}
+
+.single-post article .entry-content {
+    margin: 20px 0;
+}
+
+.single-post article .entry-content p {
+    @include font-general;
+}
+
+.single-post article time {
+    font-size:16px;
+}
+
+.single-post .featured-image {
+    float: left;
+    width: 50%;
+    margin: 20px 20px 10px 0px;
+}
+
+.single-post .featured-image img {
+    width:100%;
+    height:auto;
+}
+
+iframe.soundcloud-embed {
+    margin: 40px 0;
+    border-bottom: 2px solid #ff5500;
+    border-left: 2px solid #ff5500;
+    border-right: 2px solid #ff5500;
+    box-shadow: 0 0 5px #999999;
+
+ }
+
+ .conseguilo p span {
+    font-size: 22px;
+    float: left;
+ }
+
+ .conseguilo p a {
+    margin: -1px 0 0 10px;
+    float: left;
+ }
+
+
+/*FOOTER*/
+
+footer.content-info {
+    background:url(images/back3.png) repeat;   
+}
+
+footer .container {
+     @include inner-content;
+}
+
+footer ul.social {
+    float: right;
+    margin: 24px 0 0;
+}
+
+footer ul.social li {
+    float:left;
+    margin-right:15px;
+}
+
+footer ul.social li:last-child {
+    margin:0;
+}
+
+footer ul.social li a {
+    display:inline-block;
+}
+
+footer ul.social li a.facebook {
+    @include social-icon(url(images/facebook.png));
+}
+
+footer ul.social li a.soundcloud {
+    @include social-icon(url(images/soundcloud.png));
+}
+
+footer ul.social li a.beatport {
+    @include social-icon(url(images/beatport.png));
+}
+
+footer p.copy {
+    float: left;
+    margin: 30px 0;
+    font-size: 14px;
+}
+
+/*CONTACTO*/
+
+.contact .grey form {
+    width:500px;
+    padding-bottom:100px;
+}
+
+.contact form p {
+    font-size:16px;
+    margin-bottom: 5px; 
+}
+
+.contact form input[type=text],
+.contact form input[type=email] {
+    @include input-contacto;   
+    height: 25px;
+}
+
+.contact form input[type=submit] {
+    @include input-contacto;   
+    width: 70px;
+    border-radius: 5px;
+    height: 25px;
+    border:1px solid $amarillo;
+    float:right;
+}
+
+.contact form textarea {
+    @include input-contacto;   
+    resize: none;
+    padding:5px;
+}

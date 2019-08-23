@@ -1,0 +1,241 @@
+
+@media only screen and (max-width: 1024px)  {
+	.container.wrap .content {
+		width:100%;
+	}
+
+	header .container {
+		width:100%;
+	}
+
+	.yellow-line,
+	.red-line {
+		width: 89%;
+	}
+
+	header a.brand {
+		width: 250px;
+    	background-size: 250px;
+    	height:70px;
+	}
+
+	header .nav-primary {
+		margin: 5px 5px 0;
+	}
+
+	header nav ul li a {
+		font-size:16px;
+	}
+
+	.main {
+	    width: 72%;
+	}
+
+	aside.sidebar {
+		width: 20%;
+    	padding: 40px 5px;
+	}
+
+	footer.content-info {
+		padding: 0 10px;
+	}
+
+	footer .container {
+		width:100%;
+	}
+
+	header nav ul li:first-child ul {
+		width: 68px;
+	}
+
+	header nav ul li:nth-child(2) ul {
+		width: 92px;
+	}
+
+	header nav ul li ul.sub-menu li a {
+		font-size: 12px;
+    	padding: 3px 8px;
+	}
+
+	.home .page-header h1, 
+	.about .page-header h1 {
+		font-size: 24px;
+	}
+
+	h2.entry-title a {
+		font-size: 24px;
+	}	
+
+	.category-releases .entry-summary a.ver-mas {
+		margin-top:5px;
+	}
+
+
+}
+
+
+
+@media only screen and (max-width: 768px)  { 
+	.main {
+		padding:0 10px;
+	}
+
+	aside.sidebar .soundcloud-user {
+		height:270px;
+	}
+
+	aside.sidebar {
+	    width: 24%;
+	    padding: 40px 10px; 
+	}
+
+	.contact .grey form {
+		width:400px;	
+	}
+
+	.contact form input[type=text], 
+	.contact form input[type=email] {
+		width:400px;
+	}
+
+	.contact form textarea {
+		width:400px;	
+	}
+
+	.single-post article h1 {
+		font-size: 26px;
+	}
+
+	.single-post .featured-image {
+		width:25%;
+	}
+
+	iframe.soundcloud-embed {
+	    width: 450px;
+    	height: 160px;
+	}
+
+	.yellow-line, .red-line {
+		width: 95%;
+	}
+}
+
+@media only screen and (max-width: 667px)  {
+	.yellow-image,
+	.red-image {
+		display:none;
+	}
+
+	.yellow-line,
+	.red-line {
+		width:100%;
+	}
+
+	header .nav-primary  {
+		display:none;
+	}
+
+	header #burguer {
+ 	   display:block;
+ 	   margin: 0 10px 0 0;
+	}
+
+	header .nav-secondary {
+		position: absolute;
+    	right: 40px;
+    	top: 72px;
+	}
+
+	header a.brand {
+		width: 200px;
+    	background-size: 200px;
+    	height: 57px;
+    	margin: 5px 5px 0;
+	}
+
+	.home .current-menu-item {
+		background-color:transparent;
+	}
+
+	.main {
+		width: 93%;
+		padding: 0 4%;
+	}
+
+	aside.sidebar {
+		width:100%;
+		text-align: center;	
+		padding: 30px 0;
+	}
+
+	.container.wrap .content {
+	    display: inline-block;
+	}
+
+	.home article .featured-image, 
+	.category article .featured-image {
+		width:100%;
+		text-align: center;
+		margin: 0;
+	}
+
+	article .der {
+	    width: 100%;
+    	margin: 30px 0 0;
+	}
+
+	aside.sidebar .soundcloud-user {
+		width: 250px;
+	}
+
+	footer ul.social {
+		width:110px;
+		margin:0 auto;
+		float:none;
+	}
+
+	.category-releases .entry-summary a.ver-mas,
+	.category-artists .entry-summary a.ver-mas	{
+		width: 50px;
+    	margin: 15px auto;
+    	display: block;
+    	text-transform: uppercase;
+	}
+
+	article.post {
+		display:block;
+	}
+
+	.contact .grey form {
+		width:100%;
+	}
+
+	.contact form input[type=text], 
+	.contact form input[type=email] {
+		width:100%;
+	}
+
+	.contact form textarea {
+	    width: 98%;
+	}
+
+	.single-post .featured-image {
+		width:100%;
+	}
+
+	iframe.soundcloud-embed {
+		width:100%;
+		height:150px;
+	}
+
+	.conseguilo p span {
+		font-size:20px;
+	}
+
+	footer ul.social li {
+		margin-bottom: 20px;
+	}
+
+	
+	
+}
